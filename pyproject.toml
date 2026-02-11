@@ -1,0 +1,36 @@
+[project]
+name = "cheby-pinns"
+version = "1.0.0"
+description = "Chebyshev-Augmented One-Shot Transfer Learning for PINNs on Nonlinear Differential Equations"
+readme = "README.md"
+requires-python = "~=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Yiqi Rao"}
+]
+keywords = ["PINNs", "perturbation", "chebyshev", "deep-learning", "pytorch"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn",
+  "matplotlib",
+  "seaborn",
+  "tqdm",
+  "neurodiffeq==0.7.0",
+  "torch==2.7.1",
+  "torchvision==0.22.1",
+  "torchaudio==2.7.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["chebypinns/*"]
